@@ -1,4 +1,5 @@
 function fibonacci() {
+    let listaDeValores = []
     let valorAtual = 0;
     let valorAnterior = 0;
     let valor= document.getElementById("valor").value;
@@ -11,8 +12,9 @@ function fibonacci() {
             valorAtual += valorAnterior;
             valorAnterior = valorAtual - valorAnterior;
         }
+        listaDeValores.push(valorAtual)
+        console.log(listaDeValores);
     }
 
-    return document.getElementById("fib").innerHTML=valorAtual;
-
+    return document.getElementById("fib").innerHTML=listaDeValores;
 }
